@@ -43,8 +43,10 @@ Use this sample payload and adapt it as needed.
 }
 ~~~~
 
-Only these keys are mandatory: **displayName, mailNickname, ownerUPNs and visibility**.
-The other keys can be provided if required. Usually, it makes sense to use the additional parameters to define the classification (that must be set in advance), and other group properties. 
+To provison an Office 365 Group only, just the follwoing keys are mandatory: **displayName, mailNickname and visibility**.
+If **createTeam** is **true** you have to provide at least one owner in the **ownerUPNs** array ["UPN1"].
+
+The other keys can be provided if required. Usually, it makes sense to use the additional parameters to define the classification (that must be set in advance), the owners, and other group properties. So, we recommend to set as many properties that are already known at this time.
 
 Most keys are string. The following keys can have these predefined values.
 
@@ -57,166 +59,14 @@ Most keys are string. The following keys can have these predefined values.
 - The request can take from some seconds to 2 minutes, depending on the availability of the GT365 API. You will receive a HTTP status message after the operation has been completed.
 - You get back a HTTP status code and a JSON message informing about the new group or any error message.
 
-In case the provisioning was successful, you get back a result with a HTTP status code 201 as here.
+In case the provisioning was successful, you get back a result with a **HTTP status code 201 Created**. The result delivers the new Group *id* and the *displayName* as here.
 
 ~~~~json
 {
-    "version": {
-        "major": 1,
-        "minor": 1,
-        "build": -1,
-        "revision": -1,
-        "majorRevision": -1,
-        "minorRevision": -1
-    },
-    "content": {
-        "headers": [
-            {
-                "key": "Content-Type",
-                "value": [
-                    "application/json; odata.metadata=minimal; odata.streaming=true; IEEE754Compatible=false; charset=utf-8"
-                ]
-            }
-        ]
-    },
-    "statusCode": 201,
-    "reasonPhrase": "Created",
-    "headers": [
-        {
-            "key": "Cache-Control",
-            "value": [
-                "private"
-            ]
-        },
-        {
-            "key": "Transfer-Encoding",
-            "value": [
-                "chunked"
-            ]
-        },
-        {
-            "key": "Location",
-            "value": [
-                "https://graph.microsoft.com/v2/{TenantID}/directoryObjects/7058b418-4c15-49f7-b9b5-3630a16f4c75/Microsoft.DirectoryServices.Group"
-            ]
-        },
-        {
-            "key": "request-id",
-            "value": [
-                "82239735-900c-4d5a-bd08-1749b932e56e"
-            ]
-        },
-        {
-            "key": "client-request-id",
-            "value": [
-                "82239735-900c-4d5a-bd08-1749b932e56e"
-            ]
-        },
-        {
-            "key": "x-ms-ags-diagnostic",
-            "value": [
-                "{\"ServerInfo\":{\"DataCenter\":\"North Europe\",\"Slice\":\"SliceC\",\"Ring\":\"2\",\"ScaleUnit\":\"000\",\"RoleInstance\":\"AGSFE_IN_2\",\"ADSiteName\":\"NEU\"}}"
-            ]
-        },
-        {
-            "key": "OData-Version",
-            "value": [
-                "4.0"
-            ]
-        },
-        {
-            "key": "Duration",
-            "value": [
-                "440.8675"
-            ]
-        },
-        {
-            "key": "Strict-Transport-Security",
-            "value": [
-                "max-age=31536000"
-            ]
-        },
-        {
-            "key": "Date",
-            "value": [
-                "Tue, 01 Oct 2019 09:03:43 GMT"
-            ]
-        }
-    ],
-    "requestMessage": {
-        "version": {
-            "major": 2,
-            "minor": 0,
-            "build": -1,
-            "revision": -1,
-            "majorRevision": -1,
-            "minorRevision": -1
-        },
-        "content": {
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": [
-                        "application/json; charset=utf-8"
-                    ]
-                },
-                {
-                    "key": "Content-Length",
-                    "value": [
-                        "701"
-                    ]
-                }
-            ]
-        },
-        "method": {
-            "method": "POST"
-        },
-        "requestUri": "https://graph.microsoft.com/v1.0/groups",
-        "headers": [
-            {
-                "key": "Authorization",
-                "value": [
-                    "Bearer {some-value}"
-                ]
-            },
-            {
-                "key": "Accept",
-                "value": [
-                    "application/json"
-                ]
-            },
-            {
-                "key": "Request-Context",
-                "value": [
-                    "appId=cid-v1:fcd32789-4a72-4362-ba23-a7598a41488a"
-                ]
-            },
-            {
-                "key": "traceparent",
-                "value": [
-                    "00-ea099a3f07555d4a8ede688e60b22a7d-5516a7ee0756d146-02"
-                ]
-            },
-            {
-                "key": "tracestate",
-                "value": [
-                    "az=cid-v1:fcd32789-4a72-4362-ba23-a7598a41488a"
-                ]
-            },
-            {
-                "key": "Request-Id",
-                "value": [
-                    "|ea099a3f07555d4a8ede688e60b22a7d.490f3e17_1."
-                ]
-            }
-        ],
-        "properties": {}
-    },
-    "isSuccessStatusCode": true
+    "id": "af626db5-48ea-41d1-92f5-6649fcf258cb",
+    "displayName": "My Group 10"
 }
 ~~~~
-
-The key "isSuccessStatusCode" with the value *true* can be used to see if the operation was successful or not.
 
 - Check the created group or Team with Microsoft Graph, the Azure Portal or another mechanism. In this sample, the result looks as here. There are 2 group owners and in total 4 members (2 members plus the 2 owners).
 [![link](./images/api-6.png)](./images/api-6.png "Click to enlarge")
