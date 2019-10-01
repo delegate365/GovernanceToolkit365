@@ -26,8 +26,9 @@ and add the key and value pairs with your own app data (the table you wrote down
 - Create a new request. This also is a **POST** request against the GT365 endpoint https://gt365api.atwork-it.com/api/ProvisionGroup. Copy the current **access_token** value in the Authorization Token field as shown here.
 [![link](./images/api-4.png)](./images/api-4.png "Click to enlarge")
 - Now, it´s time to add the payload for the API call. Submit a body in the following form, as shown in the screenshot. Click on "Body", add the JSON data (see below) and click "Send". You will see the result in the panel below.
-[![link](./images/api-5.png)](./images/api-5.png "Click to enlarge")
-Use this sample payload and adapt it as needed.
+
+**Provision an Office 365 Group**
+Use this sample payload in the Body and adapt it as needed.
 
 ~~~~json
 {
@@ -43,8 +44,10 @@ Use this sample payload and adapt it as needed.
 }
 ~~~~
 
+[![link](./images/api-5.png)](./images/api-5.png "Click to enlarge")
+
 To provison an Office 365 Group only, just the follwoing keys are mandatory: **displayName, mailNickname and visibility**.
-If **createTeam** is **true** you have to provide at least one owner in the **ownerUPNs** array ["UPN1"].
+
 
 The other keys can be provided if required. Usually, it makes sense to use the additional parameters to define the classification (that must be set in advance), the owners, and other group properties. So, we recommend to set as many properties that are already known at this time.
 
@@ -56,10 +59,33 @@ Most keys are string. The following keys can have these predefined values.
 |visibility | Private&#124;Public |
 |classification | Values must be set in the classification policy before they can be used as string here, e.g. "confidential" if set. See more [here](https://blog.atwork.at/post/2019/05/02/Groups-Governance-Toolkit-Policies). |
 
+
+**Provision a Microsoft Team**
+
+To provision a Team, use this sample payload and adapt it as needed.
+
+~~~~json
+{
+    "displayName": "My Team 12",
+    "mailNickname": "myteam12",
+    "description": "This is my project team 12",
+    "ownerUPNs": ["nestorw@M365x193702.onmicrosoft.com", "biancap@M365x193702.onmicrosoft.com"],
+	"memberUPNs": ["christiec@M365x193702.onmicrosoft.com", "raulr@M365x193702.onmicrosoft.com"],    
+    "createTeam": true,
+    "visibility": "Private"
+}
+~~~~
+
+[![link](./images/api-6.png)](./images/api-6.png "Click to enlarge")
+
+If **createTeam** is **true** you have to provide at least one owner addtionially in the **ownerUPNs** array ["UPN1"].
+
+**API results**
+
 - The request can take from some seconds to 2 minutes, depending on the availability of the GT365 API. You will receive a HTTP status message after the operation has been completed.
 - You get back a HTTP status code and a JSON message informing about the new group or any error message.
 
-In case the provisioning was successful, you get back a result with a **HTTP status code 201 Created**. The result delivers the new Group *id* and the *displayName* as here.
+In case the provisioning was successful, you get back a result with a **HTTP status code 201 Created**. For a Group, the result delivers the new Group *id* and the *displayName* as here.
 
 ~~~~json
 {
@@ -68,8 +94,18 @@ In case the provisioning was successful, you get back a result with a **HTTP sta
 }
 ~~~~
 
+For a Team, the result delivers an additional key *webUrl* as here.
+
+~~~~json
+{
+    "id": "f9b03b74-211a-4014-99cf-0d058327abcf",
+    "displayName": "My Team 12",
+    "webUrl": "https://teams.microsoft.com/l/team/19:3cbdd355af8c432f86a208f587637d7e%40thread.skype/conversations?groupId=f9b03b74-211a-4014-99cf-0d058327abcf&tenantId={TenantId}"
+}
+~~~~
+
 - Check the created group or Team with Microsoft Graph, the Azure Portal or another mechanism. In this sample, the result looks as here. There are 2 group owners and in total 4 members (2 members plus the 2 owners).
-[![link](./images/api-6.png)](./images/api-6.png "Click to enlarge")
+[![link](./images/api-7.png)](./images/api-7.png "Click to enlarge")
 
 
 ## Error messages
@@ -159,3 +195,6 @@ In such cases, correct the data and retry.
 ## Use from any client
 
 This sample shows the process how to use the GT365 API. You can test the API with Postman and then develop the API request from a Mirosoft Flow or Azure Logic App or from your own applications.
+
+**Quick navigation**
+[ReadMe](./readme.md) &middot; [API](-/API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)

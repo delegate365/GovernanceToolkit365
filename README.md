@@ -60,3 +60,6 @@ When using the API, the GT365 expects a valid token from the customer´s tenant 
 GT365 never stores any user credentials. To remove the access, the GT365 app can be removed in the customer´s tenant anytime.
 
 Enjoy!
+
+**Quick navigation**
+[ReadMe](./readme.md) &middot; [API](-/API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)

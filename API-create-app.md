@@ -43,3 +43,6 @@ You should now have the app data saved somewhere, similar as here:
 | TenantID | 21e6f8d3...
 
 Continue to use the API at [Use the API](./API-provisioning.md).
+
+**Quick navigation**
+[ReadMe](./readme.md) &middot; [API](-/API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
