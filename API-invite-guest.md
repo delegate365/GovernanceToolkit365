@@ -44,14 +44,14 @@ In case the invitation was created successfully, you get back a result with a **
 }
 ~~~~
 
-- Check the invitation with Microsoft Graph, the Azure Portal or another mechanism. In this sample, the users are filtered the result looks as here. 
+- Check the invitation with Microsoft Graph, the Azure Portal or another mechanism. In this sample, the users are filtered by Guest users. The result can look similar as here. 
 [![link](./images/api-invite-3.png)](./images/api-invite-3.png "Click to enlarge")
 - You can check the invitation in the Azure Portal or resend the invitation if needed.
 [![link](./images/api-invite-4.png)](./images/api-invite-4.png "Click to enlarge")
 - The invited user has to accept the invitation by clicking a link. The URL looks similar as here:
 https://invitations.microsoft.com/redeem/?tenant={TenantID}&user={UserID}&ticket={TicketID}&ver=2.0
 [![link](./images/api-invite-5.png)](./images/api-invite-5.png "Click to enlarge")
-- The use gets redirected to https://login.live.com/ and needs to enter a new password and to follow the steps (depending on the organization´s security configuration).
+- The user gets redirected to https://login.live.com/ and needs to enter a new password and he needs to follow the steps (depending on the organization´s security configuration).
 [![link](./images/api-invite-6.png)](./images/api-invite-6.png "Click to enlarge")
 - After a successful sign-in, the user is added as a guest user in the Microsoft 365 tenant.
 
