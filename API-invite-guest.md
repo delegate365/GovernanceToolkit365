@@ -12,6 +12,7 @@ Follow the steps to invite a guest user to your Microsoft 365 tenant.
 - Now, it´s time to add the payload for the API call. Submit a body in the following form, as shown in the screenshot. Click on "Body", add the JSON data (see below) and click "Send". You will see the result in the panel below.
 
 **Invite a user to your tenant**
+
 Use this sample payload in the Body and adapt it as needed.
 
 ~~~~json
@@ -36,7 +37,8 @@ In case the invitation was created successfully, you get back a result with a **
 {
     "id": "3771b160-f31d-4d46-a2da-f785b6a8c1ed",
     "invitedUserEmailAddress": "some.name@somedomain.org",
-    "inviteRedeemUrl": "https://invitations.microsoft.com/redeem/?tenant={TenantID}&user={UserID}]&ticket=%2bQDw9b5kvcymQ9oZD%2f7YZXMkqBRPrDW3qxwZYu75%2bPI%3d&ver=2.0",
+    "inviteRedeemUrl": "https://invitations.microsoft.com/redeem/
+       ?tenant={TenantID}&user={UserID}]&ticket={TicketID}&ver=2.0",
     "status": "PendingAcceptance",
     "sendInvitationMessage": true
 }
