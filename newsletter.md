@@ -7,7 +7,7 @@ The GT365 newsletters can be sent automatically to predefined admins or group ow
 - Ownerless Groups
 - Group Guests
 
-Each newsletter can be sent to a group of Administrators on a daily, weekly or monthly basis. The subject and the email body can be defined as needed. To configure the newsletter, download the newsletter templates from this site and contact atwork for setting the desired configuration.
+Each newsletter can be sent to a group of Administrators on a daily, weekly or monthly basis. The subject and the email body can be defined as needed. To configure the newsletter, download the newsletter templates and contact atwork for setting the desired configuration.
 
 ## Ownerless Groups
 
@@ -28,6 +28,8 @@ You can download this sample groups guests newsletter [here](./newsletter/GroupG
 To modify the team members, follow the appropriate link to Outlook for the web. There, the members and owners of the current group chan be modified as needed.
 
 [![link](./images/newsletter-3.png)](./images/newsletter-3.png "Click to enlarge")
+
+Pls. send an email to support-at-atwork.at for setting the configuration for your environment.
 
 **Quick navigation**
 [ReadMe](./readme.md) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
