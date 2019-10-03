@@ -1,6 +1,6 @@
 # [Use the API](#use-the-api)
 
-One you have [created the app](./API-create-app.md) in your Microsoft 365 tenant, we can use that app to access the GT365 API.
+Once you have [created the app](./API-create-app.md) in your Microsoft 365 tenant, we can use that app to access the GT365 API.
 
 The security concept is to get a token for the own tenant first. Then send that token to the GT365 API, so that it is allowed to provision a new Office 365 group. The token usually is valid only for about 60 minutes and expires then.
 

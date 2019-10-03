@@ -2,6 +2,8 @@
 
 Follow the steps below once to create an app that can be used from the GT365 API.
 
+*Note:* Any IDs and secrets shown on these pages are just for the documentation of this demo, they were removed and are not valid. Follow the steps to get your own keys.
+
 - Login to the Azure Portal as Global Admin and navigate to [Active Directory / App registrations](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps). 
 - Click on "New registration"
 [![link](./images/app-registration-1.png)](./images/app-registration-1.png "Click to enlarge")
@@ -13,7 +15,7 @@ Follow the steps below once to create an app that can be used from the GT365 API
 [![link](./images/app-registration-4.png)](./images/app-registration-4.png "Click to enlarge")
 - Copy the generated value (the secret) and save it in a safe place. You need that later.
 [![link](./images/app-registration-5.png)](./images/app-registration-5.png "Click to enlarge")
-If the secret gets compromised, delete the old and generate a new secret.
+If the secret gets compromised, delete the old and generate a new secret. 
 - Click on "API permissions" and on the "Add a permission" button.
 [![link](./images/app-registration-6.png)](./images/app-registration-6.png "Click to enlarge")
 - Click on the "Microsoft Graph" provider.
@@ -22,7 +24,7 @@ If the secret gets compromised, delete the old and generate a new secret.
 [![link](./images/app-registration-8.png)](./images/app-registration-8.png "Click to enlarge")
 - Search for "group". In the group section, find the "Group.ReadWrite.All" permission and select it. This permission is required to read and to create new groups and teams.
 [![link](./images/app-registration-9.png)](./images/app-registration-9.png "Click to enlarge")
-- Search for "user". In the user section, find the "User.Read.All" permission and select it. This is required to add owners to a new group. Then, click "Add permissions" to save the settings.
+- Search for "user". In the user section, find the "User.Read.All" permission and the "User.Invite.All" permission and select both. This is required to add owners to a new group and to invite guest users. Then, click "Add permissions" to save the settings.
 [![link](./images/app-registration-10.png)](./images/app-registration-10.png "Click to enlarge")
 - Check the permissions, they should set as in the following screenshot. Wait for up to 10 seconds, then click "Grant admin consent for [your organization]". This allows this application to execute tasks with the defined permissions.
 [![link](./images/app-registration-11.png)](./images/app-registration-11.png "Click to enlarge")
