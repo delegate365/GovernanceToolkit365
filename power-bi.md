@@ -32,7 +32,15 @@ Follow these steps to get your own data visualized in Power-BI.
 - Publish it to the Power-BI portal to an Office 365 Group. Done.
 
 Of course, you can create your own, custom Power-BI dashboard from a blank Power-BI file. Connect to your storage as described above.
+
+## Refresh
   
+You can refresh the visualization in Power-BI anytime by clicking on the "refresh" button in the ribbon.
+
+[![link](./images/powerbi-9.png)](./images/powerbi-9 "Click to enlarge")
+
+Keep in mind, that the data will be renewed every night. So, refreshing during the day only makes sence once. In the dashboards, you see the data from the previous day.
+
 ## Samples
 
 See some sample dashboards here: 
