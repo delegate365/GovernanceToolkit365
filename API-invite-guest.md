@@ -54,7 +54,11 @@ https://invitations.microsoft.com/redeem/?tenant={TenantID}&user={UserID}&ticket
 - The user gets redirected to https://login.live.com/ and needs to enter a new password and he needs to follow the steps (depending on the organization´s security configuration).
 [![link](./images/api-invite-6.png)](./images/api-invite-6.png "Click to enlarge")
 - After a successful sign-in, the user is added as a guest user in the Microsoft 365 tenant.
-
+- After the user has consentend, the user status in AAD will be changed to "Work Account" or "Microsoft Account", depending on the user type.
+[![link](./images/api-invite-7.png)](./images/api-invite-7.png "Click to enlarge")
+- The use status then has changed to "nvitationI accepted: Yes".
+[![link](./images/api-invite-8.png)](./images/api-invite-8.png "Click to enlarge")
+- Now the invited user can be used for collaboration in Microsoft 365.
 
 ## Error messages
 
