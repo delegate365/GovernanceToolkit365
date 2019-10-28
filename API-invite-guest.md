@@ -18,8 +18,8 @@ Use this sample payload in the Body and adapt it as needed.
 ~~~~json
 {
   "invitedUserDisplayName":"John Doe",
-  "invitedUserEmailAddress": "{john.doe@gmail.com}",
-  "inviteRedirectUrl": "https://google.com",  
+  "invitedUserEmailAddress": "john.doe@gmail.com",
+  "inviteRedirectUrl": "https://mycompany.com/guestinfo",  
   "sendInvitationMessage": true,
   "requestedBy":"adele.vance@mycompany.com"
 }

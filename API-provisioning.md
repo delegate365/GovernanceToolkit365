@@ -42,7 +42,8 @@ Use this sample payload in the Body and adapt it as needed.
     "memberUPNs": ["christiec@M365x193702.onmicrosoft.com",
                    "raulr@M365x193702.onmicrosoft.com"],    
     "createTeam": false,
-    "visibility": "Private"
+    "visibility": "Private",
+    "classification":"General"
 }
 ~~~~
 
