@@ -35,10 +35,8 @@ encodeUriComponent('my[secret?code/12:34')
 - Add a new action "HTTP" and configure it using a HTTP POST action to the endpoint and add Content-Type and the body as here:
 ~~~
 https://gt365api.atwork-it.com/api/ProvisionGroup
-
 Content-Type application/x-www-form-urlencoded
 ~~~
-
 [![link](./images/api-provision-flow-11.png)](./images/api-provision-flow-11.png "Click to enlarge")
 - Then, add the required parameters as here (filled from the SPO list or from other parameters).
 ~~~
@@ -57,7 +55,7 @@ Content-Type application/x-www-form-urlencoded
   "visibility": "@{triggerBody()?['Visibility']?['Value']}"
 }
 ~~~
-- In the HTTP action, open the "Open advanced options".
+- In the HTTP action, open the "Show advanced options" link. This extends the action box.
 - Configure the advanced options as here:
 [![link](./images/api-provision-flow-10.png)](./images/api-provision-flow-10.png "Click to enlarge")
 - As Authentication select **Active Directory OAuth**
