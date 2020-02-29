@@ -21,11 +21,11 @@ Follow the steps to provision a new Office 365 Group or Team.
 [![link](./images/api-provision-flow-1.png)](./images/api-provision-flow-1.png "Click to enlarge")
 - **Trigger:** Create a trigger to test your Flow. This can be a HTTP call, a newly added item to a SharePoint list or any other trigger. Here, we use a SPO list. Once a new item is added, the Flow starts.
 [![link](./images/api-provision-flow-2.png)](./images/api-provision-flow-2.png "Click to enlarge")
-- **AppID:** Add a new action "Initialize Variable", Use "AppID" as name and add your AppID from AAD as value.
+- **AppID:** Add a new action "Initialize Variable", Use "AppID" as name and add your AppID as value.
 [![link](./images/api-provision-flow-4.png)](./images/api-provision-flow-4.png "Click to enlarge")
-- **AppSecret:** Add a new action "Initialize Variable", Use "AppSecret" as name and add your AppSecret from AAD as value.
+- **AppSecret:** Add a new action "Initialize Variable", Use "AppSecret" as name and your value.
 [![link](./images/api-provision-flow-3.png)](./images/api-provision-flow-3.png "Click to enlarge")
-- **TenantID:** Add a new action "Initialize Variable", Use "TenantID" as name and add your TenantID from AAD as value.
+- **TenantID:** Add a new action "Initialize Variable", Use "TenantID" as name and add your TenantID as value.
 [![link](./images/api-provision-flow-5.png)](./images/api-provision-flow-5.png "Click to enlarge")
 - **Tip:** If one of the values contains special characters, you can use a formula that ensures that any special characters are properly encoded as follows:
 ~~~
