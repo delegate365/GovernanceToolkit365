@@ -4,7 +4,7 @@ Once you have [created the app](./API-create-app.md) in your Microsoft 365 tenan
 
 The security concept is to get a token for the own tenant first. Then send that token to the GT365 API, so that it is allowed to provision a new Office 365 group. The token usually is valid only for about 60 minutes and expires then.
 
-As prerequesits, you need to have the app data from the step before, similar as here.
+As prerequisites, you need to have the app data from the step before, similar as here.
 
 | Key | Value |
 |:----|:------|
@@ -28,18 +28,25 @@ Follow the steps to provision a new Office 365 Group or Team.
 - **TenantID:** Add a new action "Initialize Variable", Use "TenantID" as name and add your TenantID as value.
 [![link](./images/api-provision-flow-5.png)](./images/api-provision-flow-5.png "Click to enlarge")
 - **Tip:** If one of the values contains special characters, you can use a formula that ensures that any special characters are properly encoded as follows:
+
 ~~~
 encodeUriComponent('my[secret?code/12:34')
 ~~~
+
 [![link](./images/api-provision-flow-6.png)](./images/api-provision-flow-6.png "Click to enlarge")
+
 - Add a new action "HTTP" and configure it using a HTTP POST action to the endpoint and add Content-Type and the body as here:
-~~~
+
+~~~json
 https://gt365api.atwork-it.com/api/ProvisionGroup
-Content-Type application/x-www-form-urlencoded
+Content-Type: application/x-www-form-urlencoded
 ~~~
+
 [![link](./images/api-provision-flow-11.png)](./images/api-provision-flow-11.png "Click to enlarge")
+
 - Then, add the required parameters as here (filled from the SPO list or from other parameters).
-~~~
+  
+~~~json
 {
   
   "displayName": "@{triggerBody()?['Title']}",
@@ -55,6 +62,7 @@ Content-Type application/x-www-form-urlencoded
   "visibility": "@{triggerBody()?['Visibility']?['Value']}"
 }
 ~~~
+
 - In the HTTP action, open the "Show advanced options" link. This extends the action box.
 - Configure the advanced options as here:
 [![link](./images/api-provision-flow-10.png)](./images/api-provision-flow-10.png "Click to enlarge")
@@ -80,9 +88,9 @@ The work is done in the ProvisionGroup action. The API returns a HTTP status cod
 
 As Body, the new Group *id* and the *displayName* is returned.
 
-## Integrate the Provisionging Flow in your Approval Workflow
+## Integrate the Provisioning Flow in your Approval Workflow
 
-A complete approval workflow could look like here. 
+A complete approval workflow could look like here.
 
 [![link](./images/api-provision-flow-15.png)](./images/api-provision-flow-15.png "Click to enlarge")
 
