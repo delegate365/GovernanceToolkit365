@@ -43,7 +43,7 @@ Use this sample payload in the Body and adapt it as needed.
                    "raulr@M365x193702.onmicrosoft.com"],    
     "createTeam": false,
     "visibility": "Private",
-    "classification":"General"
+    "classification": "General"
 }
 ~~~~
 
