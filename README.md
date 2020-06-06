@@ -48,7 +48,7 @@ Note that data in a secure place. You need that for accessing the daily generate
 
 ## Usage
 
-- Access the data with the Storage Account name and key with a client tool, such as [Power BI](https://powerbi.microsoft.com/en-us/downloads/). You can download a GT365 dashboard sample zip-file from [here](https://governancetoolkit365.com/download/GovernanceToolkit365-Template.zip).
+- Access the data with the Storage Account name and key with a client tool, such as [Power BI](https://powerbi.microsoft.com/en-us/downloads/). You can download a GT365 dashboard sample zip-file from [here](https://governancetoolkit365.com/download/GovernanceToolkit365-Template.zip). (do not forget to [change the datasource](./power-bi-datasource.md) for the sample dashboard)
 - Adapt the Power BI dashboard as needed. See some sample dashboards here: 
 
 [![link](./images/bi-demo-1.png)](./images/bi-demo-1 "Click to enlarge")
