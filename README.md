@@ -1,6 +1,6 @@
 # Governance Toolkit 365
 
-The Governance Toolkit 365 (GT365) provides a compliance coverage across multiple workloads. The toolkit runs as Software-as-a-Service and automatically requests usage data from the Microsoft 365 services and delivers summarized and detailed information to custom users and administrators. 
+The Governance Toolkit 365 (GT365) provides a compliance coverage across multiple workloads. The toolkit runs as Software-as-a-Service and automatically requests usage data from the Microsoft 365 services and delivers summarized and detailed information to custom users and administrators.
 
 Additionally, the Governance Toolkit 365 provides an API for provisioning a new Office 365 Group or a new Microsoft Team. See a feature overview at [www.governancetoolkit365.com](https://governancetoolkit365.com/).
 
@@ -63,7 +63,6 @@ Note that data in a secure place. You need that for accessing the daily generate
 
 [![link](./images/bi-demo-6.png)](./images/bi-demo-6 "Click to enlarge")
 
-
 ## Setup newsletters (optional)
 
 Automatic newsletters inform about orphaned groups and guest access.
@@ -85,6 +84,6 @@ GT365 never stores any user credentials. To remove the access, the GT365 app can
 
 Enjoy!
 
-**Quick navigation**
+## Quick navigation
 
 [ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Provisioning-Flow](./API-provisioning-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)

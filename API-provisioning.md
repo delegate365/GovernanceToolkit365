@@ -6,13 +6,11 @@ The security concept is to get a token for the own tenant first. Then send that 
 
 As prerequesits, you need to have the app data from the step before, similar as here.
 
-
 | Key | Value |
 |:----|:------|
 | AppID | 91eef8ad...
 | AppSecret | /95=BRZ...
 | TenantID | 21e6f8d3...
-
 
 Use a tool to test the HTTP API requests. You can use any tool. This article here is using [Postman](https://www.getpostman.com/downloads/).
 
@@ -25,7 +23,7 @@ and add the key and value pairs with your own app data (the table you wrote down
 [![link](./images/api-2.png)](./images/api-2.png "Click to enlarge")
 - After sending the request, you get the **access_token** value for the request against the GT365 API. We need to pass that value in the Authorization header for the GT365 API call.
 [![link](./images/api-3.png)](./images/api-3.png "Click to enlarge")
-- Create a new request. This also is a **POST** request against the GT365 endpoint https://gt365api.atwork-it.com/api/ProvisionGroup. Copy the current **access_token** value in the Authorization Token field as shown here.
+- Create a new request. This also is a **POST** request against the GT365 endpoint https://governancetoolkit365.azurewebsites.net/api/ProvisionGroup. Copy the current **access_token** value in the Authorization Token field as shown here.
 [![link](./images/api-4.png)](./images/api-4.png "Click to enlarge")
 - Now, it´s time to add the payload for the API call. Submit a body in the following form, as shown in the screenshot. Click on "Body", add the JSON data (see below) and click "Send". You will see the result in the panel below.
 
@@ -50,7 +48,6 @@ Use this sample payload in the Body and adapt it as needed.
 [![link](./images/api-5.png)](./images/api-5.png "Click to enlarge")
 
 To provison an Office 365 Group only, just the follwoing keys are mandatory: **displayName, mailNickname and visibility**.
-
 
 The other keys can be provided if required. Usually, it makes sense to use the additional parameters to define the classification (that must be set in advance), the owners, and other group properties. So, we recommend to set as many properties that are already known at this time.
 
@@ -199,6 +196,6 @@ In such cases, correct the data and retry.
 
 This sample shows the process how to use the GT365 API. You can test the API with Postman and then develop the API request from a Mirosoft Flow or Azure Logic App or from your own applications.
 
-**Quick navigation**
+## Quick navigation
 
 [ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Provisioning-Flow](./API-provisioning-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)

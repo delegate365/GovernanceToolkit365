@@ -29,7 +29,7 @@ Follow the steps to provision a new Office 365 Group or Team.
 [![link](./images/api-provision-flow-5.png)](./images/api-provision-flow-5.png "Click to enlarge")
 - **Tip:** If one of the values contains special characters, you can use a formula that ensures that any special characters are properly encoded as follows:
 
-~~~
+~~~json
 encodeUriComponent('my[secret?code/12:34')
 ~~~
 
@@ -102,6 +102,6 @@ If an error occured, the right branch is executed and the Flow terminates. Other
 
 This sample shows the process how to use the GT365 API from Microsoft Flow or Microsoft Azure Logic Apps.
 
-**Quick navigation**
+## Quick navigation
 
 [ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Provisioning-Flow](./API-provisioning-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)

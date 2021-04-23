@@ -7,13 +7,28 @@ The concept is the same as working with the GT365 API to provision a new group. 
 Follow the steps to invite a guest user to your Microsoft 365 tenant.
 
 - Get a new token as described at [API-Provisioning](./API-provisioning.md).
-- In Postman, create a new request. This is a **POST** request against the GT365 endpoint https://gt365api.atwork-it.com/api/InviteGuest. Copy the current **access_token** value in the Authorization Token field as shown here.
+- In Postman, create a new request. This is a **POST** request against the GT365 endpoint https://governancetoolkit365.azurewebsites.net/api/InviteGuest. Copy the current **access_token** value in the Authorization Token field as shown here.
 [![link](./images/api-invite-1.png)](./images/api-invite-1.png "Click to enlarge")
 - Now, it´s time to add the payload for the API call. Submit a body in the following form, as shown in the screenshot. Click on "Body", add the JSON data (see below) and click "Send". You will see the result in the panel below.
 
-**Invite a user to your tenant**
+## Invite a user to your tenant
 
-Use this sample payload in the Body and adapt it as needed.
+The HTTP POST request sends data with Content-Type "application/json".
+
+~~~~json
+"method": "POST",
+"header": [
+  {
+    "key": "Content-Type",
+    "name": "Content-Type",
+    "type": "text",
+    "value": "application/json"
+  }
+],
+"body": { <...see below...> }
+~~~~
+
+Use this sample payload in the as header and body and adapt it as needed.
 
 ~~~~json
 {
@@ -27,8 +42,7 @@ Use this sample payload in the Body and adapt it as needed.
 
 [![link](./images/api-invite-2.png)](./images/api-invite-2.png "Click to enlarge")
 
-
-**API results**
+## API results
 
 - The request usually runs for some seconds, depending on the availability of the GT365 API. You will receive a HTTP status message after the operation has been completed.
 - You get back a HTTP status code and a JSON message informing about the new group or any error message.
@@ -46,7 +60,7 @@ In case the invitation was created successfully, you get back a result with a **
 }
 ~~~~
 
-- Check the invitation with Microsoft Graph, the Azure Portal or another mechanism. In this sample, the users are filtered by Guest users. The result can look similar as here. 
+- Check the invitation with Microsoft Graph, the Azure Portal or another mechanism. In this sample, the users are filtered by Guest users. The result can look similar as here.  
 [![link](./images/api-invite-3.png)](./images/api-invite-3.png "Click to enlarge")
 - You can check the invitation in the Azure Portal or resend the invitation if needed.
 [![link](./images/api-invite-4.png)](./images/api-invite-4.png "Click to enlarge")
@@ -64,14 +78,13 @@ https://invitations.microsoft.com/redeem/?tenant={TenantID}&user={UserID}&ticket
 
 ## Error messages
 
-If an error occurs during the operation, you get back a HTTP 500 internal error status.
-
+If an error occurs during the operation, you get back a HTTP 500 internal error status.  
 In such cases, correct the data and retry.
 
 ## Use from any client
 
 This sample shows the process how to use the GT365 API. You can test the API with Postman and then develop the API request from a Mirosoft Flow or Azure Logic App or from your own applications.
 
-**Quick navigation**
+## Quick navigation
 
 [ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Provisioning-Flow](./API-provisioning-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
