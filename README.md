@@ -2,7 +2,7 @@
 
 The Governance Toolkit 365 (GT365) provides a compliance coverage across multiple workloads. The toolkit runs as Software-as-a-Service and automatically requests usage data from the Microsoft 365 services and delivers summarized and detailed information to custom users and administrators.
 
-Additionally, the Governance Toolkit 365 provides an API for provisioning a new Office 365 Group or a new Microsoft Team. See a feature overview at [www.governancetoolkit365.com](https://governancetoolkit365.com/).
+Additionally, the Governance Toolkit 365 provides an API for provisioning a new Microsoft 365 Group or a new Microsoft Team. See a feature overview at [www.governancetoolkit365.com](https://governancetoolkit365.com/).
 
 ## Setup
 
@@ -79,7 +79,7 @@ If you want to use the GT365 API, follow these steps described at [API](./API.md
 
 Security is an important topic for any system. We care about security and privacy. 
 The concept of GT365 is to work with least privileges and without storing any user credentials. So, a Global Admin has to allow access for the GT365 app to read directory data and groups. This creates an application in the customer´s Microsoft 365 tenant that the GT365 can use programmatically and generate the statistics for that tenant. After the app access has been granted, the customer receives a private Storage Account key to get access to the generated data.
-When using the API, the GT365 expects a valid token from the customer´s tenant to provision a new Office 365 Group or Team. The token grants access only to provision a group with the required user data. The token is usually valid just for up to one hour and expires then.
+When using the API, the GT365 expects a valid token from the customer´s tenant to provision a new Microsoft 365 Group or Team. The token grants access only to provision a group with the required user data. The token is usually valid just for up to one hour and expires then.
 GT365 never stores any user credentials. To remove the access, the GT365 app can be removed in the customer´s tenant anytime.
 
 Enjoy!
