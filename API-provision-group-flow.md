@@ -67,7 +67,9 @@ Content-Type: application/x-www-form-urlencoded
 
 - In the HTTP action, open the "Show advanced options" link. This extends the action box.
 - Configure the advanced options as here:
+
 [![link](./images/api-provision-flow-10.png)](./images/api-provision-flow-10.png "Click to enlarge")
+
 - As Authentication select **Active Directory OAuth**
 - In the Authority, add **https://login.microsoft.com**
 - In the Tenant field, add the **@{variables('TenantID')}**

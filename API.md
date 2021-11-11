@@ -38,6 +38,10 @@ Each method returns a HTTP status code with a result.
 If successful, the respective method returns a *HTTP Statuscode 201 Created* response. If data is missing or incorrect, a *HTTP 400 Bad Request* follows. If another error occurs, a Statuscode *HTTP 500 Internal Server Error* is returned.
 The returned dataset returns a *message* that informs about the details of a failed operation.
 
+## API methods
+
+Add the desired method to the **API base url** https://governancetoolkit365.azurewebsites.net/
+
 ### /api/InviteGuest
 
 This method allows a user to invite another user with an external email address to their home tenant. Guests can attend meetings, view documents and chat in teams they're invited to. See the step-by-step description at [API-Invite-Guests](./API-invite-guest.md).
