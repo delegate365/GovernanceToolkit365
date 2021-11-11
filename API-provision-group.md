@@ -2,7 +2,7 @@
 
 Once you have [created the app](./API-create-app.md) in your Microsoft 365 tenant, we can use that app to access the GT365 API.
 
-The security concept is to get a token for the own tenant first. Then send that token to the GT365 API, so that it is allowed to provision a new Office 365 group. The token usually is valid only for about 60 minutes and expires then.
+The security concept is to get a token for the own tenant first. Then send that token to the GT365 API, so that it is allowed to perform operations in your Microsoft 365 tenant. The token usually is valid only for about 60 minutes and expires then.
 
 As prerequesits, you need to have the app data from the step before, similar as here.
 
@@ -12,9 +12,11 @@ As prerequesits, you need to have the app data from the step before, similar as 
 | AppSecret | /95=BRZ...
 | TenantID | 21e6f8d3...
 
-Use a tool to test the HTTP API requests. You can use any tool. This article here is using [Postman](https://www.getpostman.com/downloads/).
+Use any tool to test the HTTP API requests. This page here is using [Postman](https://www.getpostman.com/downloads/).
 
-Follow the steps to provision a new Office 365 Group or Team.
+## ProvisionGroup with Postman
+
+Follow the steps to provision a new Microsoft 365 Group or Team.
 
 - Postman allows to work with HTTP requests. After installing and opening the app, it looks empty as here.
 [![link](./images/api-1.png)](./images/api-1.png "Click to enlarge")
@@ -27,7 +29,8 @@ and add the key and value pairs with your own app data (the table you wrote down
 [![link](./images/api-4.png)](./images/api-4.png "Click to enlarge")
 - Now, it´s time to add the payload for the API call. Submit a body in the following form, as shown in the screenshot. Click on "Body", add the JSON data (see below) and click "Send". You will see the result in the panel below.
 
-**Provision an Office 365 Group**
+## Provision an Microsoft 365 Group
+
 Use this sample payload in the Body and adapt it as needed.
 
 ~~~~json
@@ -47,7 +50,7 @@ Use this sample payload in the Body and adapt it as needed.
 
 [![link](./images/api-5.png)](./images/api-5.png "Click to enlarge")
 
-To provison an Office 365 Group only, just the follwoing keys are mandatory: **displayName, mailNickname and visibility**.
+To provison an Microsoft 365 Group only, just the follwoing keys are mandatory: **displayName, mailNickname and visibility**.
 
 The other keys can be provided if required. Usually, it makes sense to use the additional parameters to define the classification (that must be set in advance), the owners, and other group properties. So, we recommend to set as many properties that are already known at this time.
 
@@ -60,7 +63,7 @@ Most keys are string. The following keys can have these predefined values.
 |classification | Values must be set in the classification policy before they can be used as string here, e.g. "confidential" if set. See more [here](https://blog.atwork.at/post/2019/05/02/Groups-Governance-Toolkit-Policies). |
 
 
-**Provision a Microsoft Team**
+## Provision a Microsoft Team
 
 To provision a Team, use this sample payload and adapt it as needed.
 
@@ -76,13 +79,14 @@ To provision a Team, use this sample payload and adapt it as needed.
 }
 ~~~~
 
+If you do not want to add any members in this step, provide an empty array: *"memberUPNs": []*. You have to provide at least one owner in the **ownerUPNs** array ["owner@mytenant.com"].
+
 [![link](./images/api-6.png)](./images/api-6.png "Click to enlarge")
 
-If **createTeam** is **true** you have to provide at least one owner addtionially in the **ownerUPNs** array ["UPN1"].
 
-**API results**
+## API results
 
-- The request can take from some seconds to 2 minutes, depending on the availability of the GT365 API. You will receive a HTTP status message after the operation has been completed.
+- The request can take from some seconds to 2 minutes, depending on the workload of the Microsoft 365 API. You will receive a HTTP status message after the operation has been completed.
 - You get back a HTTP status code and a JSON message informing about the new group or any error message.
 
 In case the provisioning was successful, you get back a result with a **HTTP status code 201 Created**. For a Group, the result delivers the new Group *id* and the *displayName* as here.
@@ -198,4 +202,5 @@ This sample shows the process how to use the GT365 API. You can test the API wit
 
 ## Quick navigation
 
-[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Provisioning-Flow](./API-provisioning-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
+[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provision-group.md) &middot; [API-Provisioning-Flow](./API-provision-group-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
+

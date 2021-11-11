@@ -44,7 +44,7 @@ The second email has the subject "GT365: Your storage data part two" and contain
 
 [![link](./images/setup-6.png)](./images/setup-6 "Click to enlarge")
 
-Note that data in a secure place. You need that for accessing the daily generated data. The keys are randomly generated.
+Note that all data is stored in a secure place. You need that for accessing the daily generated data. The keys are randomly generated.
 
 ## Usage
 
@@ -65,25 +65,25 @@ Note that data in a secure place. You need that for accessing the daily generate
 
 ## Setup newsletters (optional)
 
-Automatic newsletters inform about orphaned groups and guest access.
-
+Automatic newsletters inform about orphaned groups and guest access. 
 If you want to use automatic newsletters, follow these steps described at [Newsletter](./newsletter.md).
 
 ## Use the API (optional)
 
-The API allows to provision a new group out of an application or a workflow.
-
+The API allows to provision a new group out of an application or a workflow. 
 If you want to use the GT365 API, follow these steps described at [API](./API.md).
 
 ## Security in GT365
 
 Security is an important topic for any system. We care about security and privacy. 
 The concept of GT365 is to work with least privileges and without storing any user credentials. So, a Global Admin has to allow access for the GT365 app to read directory data and groups. This creates an application in the customer´s Microsoft 365 tenant that the GT365 can use programmatically and generate the statistics for that tenant. After the app access has been granted, the customer receives a private Storage Account key to get access to the generated data.
+
 When using the API, the GT365 expects a valid token from the customer´s tenant to provision a new Microsoft 365 Group or Team. The token grants access only to provision a group with the required user data. The token is usually valid just for up to one hour and expires then.
+
 GT365 never stores any user credentials. To remove the access, the GT365 app can be removed in the customer´s tenant anytime.
 
 Enjoy!
 
 ## Quick navigation
 
-[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Provisioning-Flow](./API-provisioning-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
+[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provision-group.md) &middot; [API-Provisioning-Flow](./API-provision-group-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)

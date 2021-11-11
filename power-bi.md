@@ -29,7 +29,7 @@ Follow these steps to get your own data visualized in Power-BI.
 [![link](./images/powerbi-8.png)](./images/powerbi-8 "Click to enlarge")
 - Save the file locally.
 - Adapt the Power-BI dashboard as needed and save any changes.
-- Publish it to the Power-BI portal to an Office 365 Group. Done.
+- Publish it to the Power-BI portal to an Microsoft 365 Group. Done.
 
 Of course, you can create your own, custom Power-BI dashboard from a blank Power-BI file. Connect to your storage as described above.
 
@@ -61,7 +61,7 @@ Develop your own dashboards with the data provided.
 
 ## Publish the Power-BI report to the cloud
 
-Provide access for other users and publish the dashboard to an Office 365 Group.
+Provide access for other users and publish the dashboard to an Microsoft 365 Group.
 
 [![link](./images/powerbi-10.png)](./images/powerbi-10 "Click to enlarge")
 
@@ -73,4 +73,4 @@ Automate the GT365 reports as here to get the generated governance data!
 
 ## Quick navigation
 
-[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provisioning.md) &middot; [API-Provisioning-Flow](./API-provisioning-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
+[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provision-group.md) &middot; [API-Provisioning-Flow](./API-provision-group-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
