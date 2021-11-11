@@ -40,7 +40,7 @@ The returned dataset returns a *message* that informs about the details of a fai
 
 ## API methods
 
-Add the desired method to the **API base url** https://governancetoolkit365.azurewebsites.net/
+Add the desired method to the **API base url** https://governancetoolkit365.azurewebsites.net
 
 ### /api/InviteGuest
 
@@ -58,30 +58,7 @@ This method allows a user to invite another user with an external email address 
 
 **Note:** Provide a custom *inviteRedirectUrl* if needed. Otherwise, the default Microsoft redirect URL will be used.
 
-### /api/ProvisionTeam
 
-The ProvisionTeam method allows to provision a new Microsoft Team based on a given Microsoft Teams Template. 
-If no templateId is provided, the standard Teams Template is used (as in the ProvisionGroup method).
-See the step-by-step description at [API-Provision-Team](./API-provision-team.md).
-
-~~~~json
-{
-    "displayName": "My Team 11",
-    "mailNickname": "myteam11",
-    "description": "This is my project team 11",
-    "ownerUPNs": ["nestorw@M365x193702.onmicrosoft.com",
-                  "biancap@M365x193702.onmicrosoft.com"],
-    "memberUPNs": ["christiec@M365x193702.onmicrosoft.com",
-                   "raulr@M365x193702.onmicrosoft.com"],    
-    "visibility": "Private",
-    "classification": "General",
-    "templateId": "213e3d85-d45b-475e-8ae6-73baf497b18b"
-}
-~~~~
-
-If you want to create a new team, we recommend to use this method.
-
-**Note:** At least one *ownerUPN* email must be provided. If you do not want to add members in this step, provide an empty array: *"memberUPNs": []*. If no visibility is set, the Team will become a private Team. The *classification* can be an empty string "" or can be omitted.
 
 ### /api/ProvisionGroup
 
@@ -147,5 +124,4 @@ In case of questions, pls. contact us at [support@atwork.at](mailto:support@atwo
 
 ## Quick navigation
 
-[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provisioning](./API-provision-group.md) &middot; [API-Provisioning-Flow](./API-provision-group-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
-
+[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provision-Team](./API-provision-team.md) &middot; [API-Provision-Group](./API-provision-group.md) &middot; [API-Provision-Group-Flow](./API-provision-group-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)

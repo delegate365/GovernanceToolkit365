@@ -1,12 +1,12 @@
-# [Provision Group](#provision-group)
+# [Provision Team](#provision-team)
 
 Add the method to the **API base url**, see [API](./API.md). The following authentication must be provided in every GT365 API call, see [API-Create-App](./API-create-app.md).
 
 [![link](./images/api-authentication.png)](./images/api-authentication.png "Click to enlarge")
 
-## POST /api/ProvisionGroup
+## POST /api/ProvisionTeam
 
-The ProvisionGroup method allows to provision a new Microsoft 365 group or a new Microsoft Team. 
+The ProvisionTeam method allows to provision a new Microsoft Team based on a given Microsoft Teams Template. 
 
 Use this exact sample payload as the **body** and adjust it as needed:
 
@@ -21,7 +21,7 @@ Use this exact sample payload as the **body** and adjust it as needed:
                    "raulr@M365x193702.onmicrosoft.com"],    
     "visibility": "Private",
     "classification": "General",
-    "createTeam": false
+    "templateId": "7ad852bf-ec3b-43cf-bb62-ea0954f2c851"
 }
 ~~~~
 
@@ -34,16 +34,35 @@ Use this exact sample payload as the **body** and adjust it as needed:
 - If you do not want to add members in this step, provide an empty array: *"memberUPNs": []*. 
 - *visibility* can be *private* or *public*. If no visibility is set, the Team will become a private Team. 
 - The *classification* can be an empty string "" or can be omitted.
-- *createTeam* must be set to *true* or *false*, the default is false. If false, only a Microsoft 365 group is created without team. If set to true, a group and a team is created.
 - The process usually takes at least 20 seconds, but can also take longer depending on the workload of the Microsoft 365 API.
+
+## How to create a new teams template
+
+- As Administrator, open https://admin.teams.microsoft.com/teams/templates
+- This opens the Team templates admin page. Click "Add"
+- In the "Select a starting point for your new template" page, select "Create a new template" and click "Next"
+- Add a template name and a description. **Ensure, you select the "Locale" with the option "English (United States)"**. This is essential! Currently, **only templates with that locale (en-US) can be used!** The Microsoft Product Group is aware of that issue, but currently this is the only workaround when using the API. Be aware, you cannot modify the Locale after the template has been created. Compare with the screenshot below.
+- Continue to configure the channels and apps in that template. Finalize and click "Submit".
+
+[![link](./images/api-create-teams-template.png)](./images/api-create-teams-template.png "Click to enlarge")
+
+**Important:** The Locale "English (United States)" must be used. Otherwise, the creation of a new team will throw an error.
+
+## How to get a teams template Id
+
+- As Administrator, open https://admin.teams.microsoft.com/teams/templates
+- This opens the Team templates admin page. In the list, click on the desired teams name
+- Find the teams template id under the Template ID label in the first box. See the following screenshot.
+
+[![link](./images/api-get-teams-template.png)](./images/api-get-teams-template.png "Click to enlarge")
 
 ## Samples
 
 See some samples here.
 
-### Sample 1 - Create a Microsoft 365 group
+### Sample 1 - Create a standard team
 
-This is the minimal data that must be provided to create a new group (without a team).
+This is the minimal data that must be provided.
 
 ~~~~json
 {
@@ -51,14 +70,11 @@ This is the minimal data that must be provided to create a new group (without a 
   "mailNickname": "myteam11",
   "description": "This is my project team 11",
   "ownerUPNs": ["nestorw@M365x193702.onmicrosoft.com"],
-  "memberUPNs": [ ],
-  "createTeam": false
+  "memberUPNs": [ ]
 }
 ~~~~
 
-### Sample 2 - Create a team
-
-When createTeam is true, a new team is created. The standard Teams template is used. To create a (custom) predefined team, use [API-Provision-Team](./API-provision-team.md)
+### Sample 2 - Create a team from a template
 
 ~~~~json
 {
@@ -70,7 +86,7 @@ When createTeam is true, a new team is created. The standard Teams template is u
   "memberUPNs": ["christiec@M365x193702.onmicrosoft.com"],    
   "visibility": "Public",
   "classification": "",
-  "createTeam": true
+  "templateId": "7ad852bf-ec3b-43cf-bb62-ea0954f2c851"
 }
 ~~~~
 
@@ -84,7 +100,7 @@ The return result is as follows.
 {
   "id": "b385f8dc-3487-4123-a7df-d62123effeb8",
   "displayName": "My Team 12",
-  "type": "Group",
+  "type": "Team",
   "error": "",
   "message": "Team My Team 12 was successfully created."
 }
