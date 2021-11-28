@@ -24,7 +24,7 @@ Currently, the GT 365 API supports the following use cases:
 | [POST /api/ProvisionTeam](./API-provision-team.md) | Provisions a new Team with a Teams template |
 | [POST /api/ProvisionGroup](./API-provision-group.md) | Provisions a new M365 group or a Team |
 | [POST /api/ArchiveTeam](./API-archive-team.md) | Archives or unarchives an existing Team |
-| [POST /api/CloneTeam](.API-clone-team.md/) | Clones an existing Team into a new Team |
+| [POST /api/CloneTeam](./API-clone-team.md/) | Clones an existing Team into a new Team |
 
 All methods must be called with the App credentials that allow GT365 to perform the operation. See the description and samples in this repository.
 
