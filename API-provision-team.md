@@ -1,6 +1,7 @@
 # [Provision Team](#provision-team)
 
-Add the method to the **API base url**, see [API](./API.md). The following authentication must be provided in every GT365 API call, see [API-Create-App](./API-create-app.md).
+Once you have [created the app](./API-create-app.md) in your Microsoft 365 tenant, you can use that app to access the GT365 API.
+Add the desired method below to the **[API base url](./API.md)**.
 
 [![link](./images/api-authentication.png)](./images/api-authentication.png "Click to enlarge")
 
@@ -24,6 +25,8 @@ Use this exact sample payload as the **body** and adjust it as needed:
     "templateId": "7ad852bf-ec3b-43cf-bb62-ea0954f2c851"
 }
 ~~~~
+
+**Note:** If the *templateId* is omitted or empty, the new team will be a team with the standard (empty) Teams template. At least one *ownerUPN* email must be provided. If you do not want to add any members in this step, provide an empty array: *"memberUPNs": []*. If no visibility is set, the Team will become a private group. The *classification* can be an empty string "" or can be omitted. 
 
 ## Specifications
 
@@ -90,11 +93,10 @@ This is the minimal data that must be provided.
 }
 ~~~~
 
-### Return codes
+## Return codes
 
-The method returns a HTTP Statuscode with a result. If the operation was successful, *HTTP 201 Created* is returned. If data is missing or incorrect, a *HTTP 400 Bad Request* follows. If another error occurs, a Statuscode *HTTP 500 Internal Server Error* is returned. You can react on the HTTP Statuscode.
-
-The return result is as follows. 
+The method returns a status code for a successful operation: **HTTP 201 Created**.  
+The return result is as follows.   
 
 ~~~~json
 {
@@ -107,6 +109,11 @@ The return result is as follows.
 ~~~~
 
 The *id* is the new group Id (that can be used for other operations).The  type is *Group* or *Team*. *error* includes any error message.
+
+Any other status code means, the operation was not successful.  
+If data is missing or is incorrect, a **HTTP 400 Bad Request** follows.  
+If another error occurs, a Statuscode **HTTP 500 Internal Server Error** is returned.  
+The returned dataset returns a *message* that informs about the details of a failed operation.  
 
 ## Quick navigation
 

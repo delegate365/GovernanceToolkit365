@@ -1,23 +1,43 @@
-# [Invite guest](#invite-guest)
+# [Archive team](#archive-team)
 
 Once you have [created the app](./API-create-app.md) in your Microsoft 365 tenant, you can use that app to access the GT365 API.
 Add the desired method below to the **[API base url](./API.md)**.
 
-## /api/InviteGuest
+## /api/ArchiveTeam
 
-This method allows a user to invite another user with an external email address to their home tenant. Guests can attend meetings, view documents and chat in teams they're invited to. See the step-by-step description at [API-Invite-Guests-Demo](./API-invite-guest-demo.md).
+This method allows to archive or to unarchive an existing team. Use the *archive* flag set to *true*, to archive a team. Top unarchive a team, set the flag to *false*.
 
 ~~~~json
 {
-  "invitedUserDisplayName": "John Doe",
-  "invitedUserEmailAddress": "john.doe@gmail.com",
-  "inviteRedirectUrl": "https://mycompany.com/guestinfo",  
-  "sendInvitationMessage": true,
-  "requestedBy": "adele.vance@mycompany.com"
+  "archive": false,
+  "email": "team12@M365x029176.onmicrosoft.com"
 }
 ~~~~
 
-**Note:** Provide a custom *inviteRedirectUrl* if needed. Otherwise, the default Microsoft redirect URL *https://invitations.microsoft.com* will be used.
+**Note:** To identify the team to (un)archive, one key is sufficient: Submit an *email*, or the *DisplayName*, or the *teamId* for the team you want to archive. The following samples work as welland are equal to the first sample above.
+
+~~~~json
+{
+  "archive": true,
+  "displayName": "Team 12",
+}
+~~~~
+
+~~~~json
+{
+  "archive": true,
+  "teamId":"12397f96-b754-4bd4-8e1e-c70c017f0345"
+}
+~~~~
+
+Use *false* to reactivate an archived team.
+
+~~~~json
+{
+  "archive": false,
+  "teamId":"12397f96-b754-4bd4-8e1e-c70c017f0345"
+}
+~~~~
 
 ## Return codes
 
@@ -25,11 +45,9 @@ The method returns a status code for a successful operation: **HTTP 201 Created*
 
 ~~~~json
 {
-  "id": "<requestid>",
-  "invitedUserEmailAddress": "john.doe@gmail.com",
-  "inviteRedeemUrl": "https://login.microsoftonline.com/redeem?rd=https%3a%2f%2finvitations.microsoft.com%2fredeem%2f%3ftenant%3<tenantid>%26<userid>%26ticket%3d<ticketid>%3d2.0",
-  "status": "PendingAcceptance",
-  "sendInvitationMessage": true
+  "teamId": "2e2b6dbb-83ae-49b5-9a98-e77ff1536eff",
+  "message": "Successfully unarchived Team Team12",
+  "error": ""
 }
 ~~~~
 
