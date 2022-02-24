@@ -16,7 +16,7 @@ The GT365 is provided as SaaS solution. Depending on the planned usage, you can 
 [![link](./images/register-2.png)](./images/register-2 "Click to enlarge")
 
 4. The request will be manually approved usually within one business day. You will receive an email with the subject "GT365: Welcome! Pls. grant the app consent: {your-domain}".
-Send this email (or the provided [link](https://bit.ly/gt365app)) to a Global Administrator of your Microsoft 365 tenant.
+Send this email (or the provided links [app1](https://bit.ly/gt365app1)) and [app2](https://bit.ly/gt365app2)) to a Global Administrator of your Microsoft 365 tenant. Both links must be approved.
 
 [![link](./images/setup-1.png)](./images/setup-1.png "Click to enlarge")
 [![link](./images/setup-1b.png)](./images/setup-1b.png "Click to enlarge")
