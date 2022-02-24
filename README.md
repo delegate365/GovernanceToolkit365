@@ -16,12 +16,12 @@ The GT365 is provided as SaaS solution. Depending on the planned usage, you can 
 [![link](./images/register-2.png)](./images/register-2 "Click to enlarge")
 
 4. The request will be manually approved usually within one business day. You will receive an email with the subject "GT365: Welcome! Pls. grant the app consent: {your-domain}".
-Send this email (or the provided links [app1](https://bit.ly/gt365app1)) and [app2](https://bit.ly/gt365app2)) to a Global Administrator of your Microsoft 365 tenant. Both links must be approved.
+Send this email (or the two links [app1](https://bit.ly/gt365app1) and [app2](https://bit.ly/gt365app2)) to a Global Administrator of your Microsoft 365 tenant. Both links must be approved.
 
 [![link](./images/setup-1.png)](./images/setup-1.png "Click to enlarge")
 [![link](./images/setup-1b.png)](./images/setup-1b.png "Click to enlarge")
 
-5. A Global Admin must open that link and confirm the app access.When working with multiple identities, we recommend to open the link in a browser In-Private mode.
+5. A Global Admin must open the links and confirm the app access. When working with multiple identities, we recommend to **open the link in a browser In-Private mode**.
 
 [![link](./images/setup-2.png)](./images/setup-2 "Click to enlarge")
 
@@ -29,11 +29,12 @@ Sign-in with the Global Admin and the password (and additional sign-options if c
 
 [![link](./images/setup-3.png)](./images/setup-3 "Click to enlarge")
 
-The app only asks for the least privilege permissions. It needs to read  directory data, groups and users and permissions for provisioning groups and to invite guests. You will be redirected to a confirmation page.
+The app only asks for the least privilege permissions. It needs to read directory data, groups and users and permissions for provisioning groups and to invite guests. You will be redirected to a confirmation page.
 
 [![link](./images/setup-4.png)](./images/setup-4 "Click to enlarge")
 
-You can close the page or the browser.
+Do the same with the second app link to enable the Power BI module.  
+Then, you can close the page or the browser. 
 
 6. Now the GT365 app is allowed to access the tenant. The statistics generation is done during the night. So, you will receive emails with the Storage Account access data on the next day automatically. Wait for that emails. They contain the Storage name and key, similar as in the following screenshots.
 The first email has the subject "GT365: Your storage for "{your-domain}" and contains the Storage Account name.
