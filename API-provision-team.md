@@ -22,11 +22,17 @@ Use this exact sample payload as the **body** and adjust it as needed:
                    "raulr@M365x193702.onmicrosoft.com"],    
     "visibility": "Private",
     "classification": "General",
-    "templateId": "7ad852bf-ec3b-43cf-bb62-ea0954f2c851"
+    "templateId": "7ad852bf-ec3b-43cf-bb62-ea0954f2c851",
+    "more": {
+      "somecustomkey1": "some custom data1",
+      "somecustomkey2": "some custom data2",
+    }
 }
 ~~~~
 
 **Note:** If the *templateId* is omitted or empty, the new team will be a team with the standard (empty) Teams template. At least one *ownerUPN* email must be provided. If you do not want to add any members in this step, provide an empty array: *"memberUPNs": []*. If no visibility is set, the Team will become a private group. The *classification* can be an empty string "" or can be omitted. 
+
+The **more** key can be provided to store additional custom data. This key can contain up to 4000 characters in the classic key/value pairs as shown above.
 
 ## Specifications
 
