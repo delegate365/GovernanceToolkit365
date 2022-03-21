@@ -13,11 +13,17 @@ This method allows a user to invite another user with an external email address 
   "invitedUserEmailAddress": "john.doe@gmail.com",
   "inviteRedirectUrl": "https://mycompany.com/guestinfo",  
   "sendInvitationMessage": true,
-  "requestedBy": "adele.vance@mycompany.com"
+  "requestedBy": "adele.vance@mycompany.com",
+  "more": {
+    "somecustomkey1": "some custom data1",
+    "somecustomkey2": "some custom data2",
+  }  
 }
 ~~~~
 
 **Note:** Provide a custom *inviteRedirectUrl* if needed. Otherwise, the default Microsoft redirect URL *https://invitations.microsoft.com* will be used.
+
+The **more** key can be provided to store additional custom data. This key can contain up to 4000 characters in the classic key/value pairs shown above. This data is stored in the GT365 storage as a json object. If omitted, this field contains an empty {} expression.
 
 ## Return codes
 
