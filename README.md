@@ -1,12 +1,12 @@
 # Governance Toolkit 365
 
-The Governance Toolkit 365 (GT365) provides a compliance coverage across multiple workloads. The toolkit runs as Software-as-a-Service and automatically requests usage data from the Microsoft 365 services and delivers summarized and detailed information to custom users and administrators.
+The Governance Toolkit 365 (GT365) provides a compliance coverage across multiple workloads. The toolkit runs as **Software-as-a-Service** and automatically requests usage data from the Microsoft 365 services and delivers summarized and detailed information to custom users and administrators.
 
-Additionally, the Governance Toolkit 365 provides an API for provisioning a new Microsoft 365 Group or a new Microsoft Team. See a feature overview at [www.governancetoolkit365.com](https://governancetoolkit365.com/).
+Additionally, the Governance Toolkit 365 provides an API for specific tasks in Microsoft 365 and many **solutions** to automate business processes within M365. See a feature overview, FAQ, and videos at [www.governancetoolkit365.com](https://governancetoolkit365.com/).
 
 ## Setup
 
-The GT365 is provided as SaaS solution. Depending on the planned usage, you can use the reporting part only, the newsletters and the API if required. The  onboarding includes these steps.
+The GT365 is provided as SaaS solution. Depending on the planned usage, you can use the reporting part only, the solutions, and the API if required. We are happy to support for onboarding steps. The setup is easy and can be done in a few minutes. Here´s how to do it:
 
 1. Open the [www.governancetoolkit365.com](https://governancetoolkit365.com/) website. At the end, there´s a Register link. Open that link.
 2. Fill out the form and ensure that you enter **your email address and a valid Microsoft 365 domain**. The domain name is usually your email address domain, such as "contoso.com". Then, submit the form. When submitted, you will see a confirmation such as "Thank you for submitting your request. You will receive an email when the approval is done.".
@@ -47,9 +47,11 @@ The second email has the subject "GT365: Your storage data part two" and contain
 
 Note that all data is stored in a secure place. You need that for accessing the daily generated data. The keys are randomly generated.
 
-## Usage
+## Usage with Power BI
 
-- Access the data with the Storage Account name and key with a client tool, such as [Power BI](https://powerbi.microsoft.com/en-us/downloads/). You can download a GT365 dashboard sample zip-file from [here](https://governancetoolkit365.com/download/GovernanceToolkit365-Template.zip). (do not forget to [change the datasource](./power-bi-datasource.md) for the sample dashboard)
+- Access the data with the Storage Account name and key with a client tool, such as [Power BI](https://powerbi.microsoft.com/en-us/downloads/).
+- You can download a GT365 dashboard sample zip-file from [here](https://governancetoolkit365.com/download/GovernanceToolkit365-Template.zip).  
+- Change the data source to your GT365 storage as described at [Connect-your-Governance-Toolkit-365-storage-to-Power-BI-Desktop.pdf](./PowerBI/Connect-your-Governance-Toolkit-365-storage-to-Power-BI-Desktop.pdf)
 - Adapt the Power BI dashboard as needed. See some sample dashboards here: 
 
 [![link](./images/bi-demo-1.png)](./images/bi-demo-1 "Click to enlarge")
@@ -64,10 +66,9 @@ Note that all data is stored in a secure place. You need that for accessing the 
 
 [![link](./images/bi-demo-6.png)](./images/bi-demo-6 "Click to enlarge")
 
-## Setup newsletters (optional)
+## Email templates
 
-Automatic newsletters inform about orphaned groups and guest access. 
-If you want to use automatic newsletters, follow these steps described at [Newsletter](./newsletter.md).
+Automatic processes can send notifications in various forms. YOu can find some samples of such emails at [emailtemplates](./emailtemplates).
 
 ## Use the API (optional)
 
@@ -87,4 +88,4 @@ Enjoy!
 
 ## Quick navigation
 
-[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provision-Team](./API-provision-team.md) &middot; [API-Provision-Group](./API-provision-group.md) &middot; [API-Provision-Group-Flow](./API-provision-group-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [Newsletter](./newsletter.md) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
+[ReadMe](https://github.com/delegate365/GovernanceToolkit365/) &middot; [API](./API.md) &middot; [API-Create-App](./API-create-app.md) &middot; [API-Provision-Team](./API-provision-team.md) &middot; [API-Provision-Group](./API-provision-group.md) &middot; [API-Provision-Group-Flow](./API-provision-group-flow.md) &middot; [API-Invite-Guests](./API-invite-guest.md) &middot; [emailtemplates](./emailtemplates) &middot; [Power-BI](./power-bi.md) &middot; [GT365](https://governancetoolkit365.com/)
