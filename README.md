@@ -1,4 +1,13 @@
-# Governance Toolkit 365
+# Repository Archived
+
+This repository is read-only and no longer receives updates.
+
+For the latest documentation, please use:  
+https://github.com/atworkat/GovernanceToolkit365
+
+---
+
+## Governance Toolkit 365
 
 The Governance Toolkit 365 (GT365) provides a compliance coverage across multiple workloads. The toolkit runs as **Software-as-a-Service** and automatically requests usage data from the Microsoft 365 services and delivers summarized and detailed information to custom users and administrators.
 
